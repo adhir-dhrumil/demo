@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-3">
+        @if (isDiv1Visible == true) {
+        <div class="bg-primary p-3">
+            DIV 1
+        </div>
+    }
+    </div>
+    <div class="col-3">
+        @if (div2Visible == "yes"){
+        <div class="bg-secondary p-3">
+            DIV 2
+        </div>
+    }
+    </div>
+    <div class="col-3">
+        <div class="bg-danger p-3">
+           @if (dayname == 'mon'){
+                <p>MONDAY</p>
+           } @else if (dayname == 'tue') {
+                <p>TUSEDAY</p>
+           }@else if (dayname == 'wed') {
+                <p>WEDNESDAY</p>
+           }@else if (dayname == 'thu') {
+                <p>THRUSDAY</p>
+           }@else if (dayname == 'fri') {
+                <p>FRIDAY</p>
+           }@else if (dayname == 'sat') {
+                <p>SATURDAY</p>
+           }@else if (dayname == 'sun') {
+                <p>SUNDAY</p>
+           }@else {
+                <p> plz enter valid day name</p>
+           }
+        </div>
+    </div>
+</div>
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-success"(click)="showhideDiv1(false)">Hide</button>
+        <button class="btn btn-danger"(click)="showhideDiv1(true)">Show</button>
+    </div>
+    <div class="col-3 text-center">
+        <input type="text" [(ngModel)] ="div2Visible">
+    </div>
+    <div class="col-3 text-center">
+        <input type="text" [(ngModel)]="dayname">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>email</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of studentList; track $index) {
+                    <tr>
+                        <td>{{$index+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.mobile}}</td>
+                        <td>{{item.email}}</td>
+                        
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card" bg-success>
+                <h5>Videos List</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    @for (item of videoList; track $index) {
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-body">
+                                  <h4 class="card-title">{{item.videoTitle}}</h4>
+                                  <p class="card-text">{{item.videoDescription}}</p>
+                                  <a href="#" class="card-link"><button class="btn btn-success btn-sm">Edit</button></a>
+                                  <a href="#" class="card-link"><button class="btn btn-danger btn-sm">Delete</button></a>
+                                </div>
+                              </div>
+                        </div>
+                    }
+                   
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body">
+                              <h4 class="card-title">Card title</h4>
+                              <p class="card-text">Some example text. Some example text.</p>
+                              <a href="#" class="card-link">Card link</a>
+                              <a href="#" class="card-link">Another link</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body">
+                              <h4 class="card-title">Card title</h4>
+                              <p class="card-text">Some example text. Some example text.</p>
+                              <a href="#" class="card-link">Card link</a>
+                              <a href="#" class="card-link">Another link</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header" bg-success>
+                <h5> New Videos For</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Title</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-12">
+                        <label for="">URL</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-12">
+                        <label for="">Thumnail</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-12">
+                        <label for="">Duration</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-12">
+                        <label for="">Description</label>
+                        <textarea class="form-control" rows=3></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <button btn btn-secondary>Reset</button>
+                    </div>
+                    <div class="col-6">
+                        <button btn btn-success>Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
